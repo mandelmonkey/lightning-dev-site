@@ -129,7 +129,7 @@ $ tree $GOPATH -L 2
 Start up the Alice node from within the `alice` directory:
 ```bash
 cd $GOPATH/dev/alice
-alice$ lnd --rpcport=10001 --peerport=10011 --restport=8001 --datadir=test_data --logdir=test_log --debuglevel=info --no-macaroons --bitcoin.rpcuser=kek --bitcoin.rpcpass=kek --bitcoin.simnet --bitcoin.active
+alice$ lnd --rpcport=10001 --peerport=10011 --restport=8001 --datadir=test_data --logdir=test_log --debuglevel=info --no-macaroons --bitcoin.rpcuser=kek --bitcoin.rpcpass=kek --bitcoin.simnet --bitcoin.active --noencryptwallet
 ```
 The Alice node should now be running and displaying output.
 
@@ -154,6 +154,7 @@ Breaking down the components:
   * `--bitcoin.simnet`: Specifies whether to use `simnet` or `testnet`
   * `--bitcoin.active`: Specifies that bitcoin is active. Can also include
     `--litecoin.active` to activate Litecoin
+  * `--noencryptwallet` Specifies that the wallet be unencrypted, for this tutorial we will set this flag disabling encryption
 
 ### Running Bob and Charlie
 
@@ -201,6 +202,7 @@ logdir=test_log
 debuglevel=info
 debughtlc=true
 no-macaroons=true
+noencryptwallet=true
 
 [Bitcoin]
 bitcoin.simnet=1
