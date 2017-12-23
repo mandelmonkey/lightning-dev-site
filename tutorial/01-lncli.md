@@ -414,9 +414,9 @@ alice$ lncli-alice openchannel --node_key=<BOB_PUBKEY> --local_amt=1000000
 - `--local_amt` specifies the amount of money that Alice will commit to the channel.
 To see the full list of options, you can try `lncli openchannel --help`.
 
-We now need to mine one block so that the channel is considered valid:
+We now need to mine 3 blocks so that the channel is considered valid:
 ```bash
-btcctl --simnet --rpcuser=kek --rpcpass=kek generate 1
+btcctl --simnet --rpcuser=kek --rpcpass=kek generate 3
 ```
 
 Check that Alice<-->Bob channel was created:
