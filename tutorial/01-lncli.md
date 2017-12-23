@@ -490,7 +490,7 @@ Now that we know how to send single-hop payments, sending multi hop payments is 
 charlie$ lncli-charlie openchannel --node_key=<BOB_PUBKEY> --local_amt=800000 --push_amt=200000
 
 # Mine the channel funding tx
-btcctl --simnet --rpcuser=kek --rpcpass=kek generate 1
+btcctl --simnet --rpcuser=kek --rpcpass=kek generate 3
 ```
 
 Note that this time, we supplied the `--push_amt` argument, which specifies the
